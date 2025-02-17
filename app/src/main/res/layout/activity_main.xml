@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFDFD"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/spock"
+        android:layout_width="130dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="63dp"
+        android:onClick="spock"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lagarto"
+        app:srcCompat="@drawable/spock" />
+
+    <ImageView
+        android:id="@+id/tesoura"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="58dp"
+        android:onClick="tesoura"
+        app:layout_constraintBottom_toBottomOf="@+id/lagarto"
+        app:layout_constraintEnd_toStartOf="@+id/lagarto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lagarto"
+        app:srcCompat="@drawable/tesoura" />
+
+    <ImageView
+        android:id="@+id/maquina"
+        android:layout_width="130dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintBottom_toTopOf="@+id/resu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fundo" />
+
+    <ImageView
+        android:id="@+id/pedra"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="58dp"
+        android:onClick="pedra"
+        app:layout_constraintBottom_toBottomOf="@+id/papel"
+        app:layout_constraintEnd_toStartOf="@+id/papel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/papel"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageView
+        android:id="@+id/lagarto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="lagarto"
+        app:layout_constraintBottom_toTopOf="@+id/spock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tesoura"
+        app:layout_constraintTop_toBottomOf="@+id/papel"
+        app:srcCompat="@drawable/lagarto" />
+
+    <ImageView
+        android:id="@+id/papel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="papel"
+        app:layout_constraintBottom_toTopOf="@+id/lagarto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/pedra"
+        app:layout_constraintTop_toBottomOf="@+id/resu"
+        app:srcCompat="@drawable/papel" />
+
+    <TextView
+        android:id="@+id/resu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="39dp"
+        android:fontFamily="@font/alata"
+        android:text="VENCEDOR"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/papel"
+        app:layout_constraintStart_toStartOf="@+id/maquina"
+        app:layout_constraintTop_toBottomOf="@+id/maquina" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
